@@ -839,7 +839,7 @@ label.error {
 .subscribe #subscribe {
   background-color: transparent;
   border: 2px solid #fff;
-  border-radius: 2px;
+  border-radius: 15px;
   height: 40px;
   text-indent: 10px;
   width: 100%;
