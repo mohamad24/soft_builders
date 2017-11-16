@@ -538,7 +538,9 @@ visibility: visible;
 	text-align: center;
 	position: absolute;
 	left: 0;
+
 	top: 0;
+    border-radius: 15px;
 	width: 100%;
 	height: 100%;
 	color: #fff;
@@ -650,6 +652,7 @@ visibility: visible;
   color: #fff;
   height: 42px;
   padding: 10px 0 0;
+    border-radius: 15px;
   width: 42px;
 }
 
