@@ -12,11 +12,11 @@
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- Page Title -->
-        <title>Themefisher.Free Bootstrap3 based HTML5 Templates</title>		
+        <title> SOFT BUILDERS </title>
 		<!-- Meta Description -->
-        <meta name="description" content="Blue One Page Creative HTML5 Template">
-        <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
-        <meta name="author" content="Muhammad Morshed">
+        <meta name="description" content="Software builders is freelance team">
+        <meta name="keywords" content="freelance,web development,web,responsive,design freelance,team,company,outsource">
+        <meta name="author" content="Soft Builders">
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -28,7 +28,9 @@
 		<!-- Fontawesome Icon font -->
 		
     <!-- Bootstrap -->
-  	    <link href="<?php echo base_url();?>boost/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" width="16px" height="16" type="image/png" href="./images/demo/LOGO.png"/>
+
+        <link href="<?php echo base_url();?>boost/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo base_url();?>boost/css/font-awesome.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Changa:500" rel="stylesheet">
@@ -39,7 +41,8 @@
         <link rel="stylesheet" href="<?php echo base_url();?>layout/styles/jquery.fancybox.css">
 		<!-- animate -->
         <link rel="stylesheet" href="<?php echo base_url();?>layout/styles/animate.css">
-		<!-- Main Stylesheet -->
+
+        <!-- Main Stylesheet -->
         <link rel="stylesheet" href="<?php echo base_url();?>layout/styles/main.css">
 		<!-- media-queries -->
         <link rel="stylesheet" href="<?php echo base_url();?>layout/styles/media-queries.css">

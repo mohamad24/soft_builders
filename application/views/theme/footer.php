@@ -6,6 +6,7 @@
                     <?php  if ($lang == "english"){?>
 					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
 						<div class="footer-single">
+                            <img src="./images/demo/LOGO2.png" width="100px"  height="80px" alt="">
                             <h2><?php echo $slider1;?></h2>
 							<p><?php echo $text;?></p>
 						</div>
@@ -91,6 +92,7 @@
 
                         <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" style="direction: rtl;">
                             <div class="footer-single">
+                                <img src="./images/demo/LOGO2.png" width="100px"  height="80px" alt="">
                                 <h2><?php echo $slider1;?></h2>
                                 <p><?php echo $text;?></p>
                             </div>

@@ -38,12 +38,19 @@ $(document).ready(function(){
 	
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
+            $('#Logo').attr('src','./images/demo/LOGO2.png')
             $("#navigation").css("background-color","#0EB493");
         } else {
             $("#navigation").css("background-color","rgba(16, 22, 54, 0.2)");
         }
     });
-	
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() < 400) {
+            $('#Logo').attr('src','./images/demo/LOGO.png')
+        }
+    });
+
 	/* ========================================================================= */
 	/*	Fix Slider Height
 	/* ========================================================================= */	
@@ -126,9 +133,26 @@ $(document).ready(function(){
     
 });
 
+var $myGroup = $('#accordion');
+$myGroup.on('show.bs.collapse','.collapse', function() {
+    $myGroup.find('.collapse.in').collapse('hide');
+});
+
+
+
+var $myGroup = $('#accordion');
+$myGroup.on('show.bs.collapse','.collapse', function() {
+    $myGroup.find('.collapse.in').collapse('hide');
+});
+
 
 
 $(document).ready(function(){
+
+
+
+
+
 
     $("#collapseOne").collapse();
 
