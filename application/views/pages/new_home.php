@@ -3,7 +3,7 @@
 
 
    <header id="navigation" class="navbar-fixed-top navbar">
-            <div class="container">
+            <div class="container" id="navcontainer">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -15,13 +15,14 @@
 					<!-- logo -->
 					<nav class="collapse navbar-collapse navbar-left"> 
 					<ul class="nav navbar-nav">
-                 
-				   <?php if($lang == 'english'){?>
+
+                        <li><img id="Logo" src="./images/demo/LOGO.png" width="80px" height="60px"  alt=""></li>
+
+                        <?php if($lang == 'english'){?>
 				   <li><a id="switch" data-val="ar" href='<?php echo base_url(); ?>LangSwitch/switchLanguage/arabic'>عربي</a></li>
 			    	<?php }else if ($lang == 'arabic'){?>
 			    	<li><a id="switch" data-val="en" href='<?php echo base_url(); ?>LangSwitch/switchLanguage/english'>English</a></li>
                     <?php }?>
-                    
                       </ul>
 					  </nav>
                 </div> 
@@ -31,7 +32,7 @@
                     <ul id="nav" class="nav navbar-nav">
                     <?php if($lang == 'english'){?>
                         <li class="current"><a href="#body"><?php echo $list1;?></a></li>
-                  
+                        <li><a href="#features"><?php echo $list2;?></a></li>
                         <li><a href="#works"><?php echo $list3;?></a></li>
                         <li><a href="#team"><?php echo $list4;?></a></li>
                         <li><a href="#contact"><?php echo $list5;?></a></li>
@@ -61,31 +62,41 @@
         ==================================== -->
 		
 		<section id="slider">
-            <div  data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated firstimg">
-                <img src="./images/demo/img15.png" alt="">
+
+            <div align="center" class="embed-responsive embed-responsive-16by9 video-container">
+                <video autoplay loop class="embed-responsive-item">
+
+                <source src="./images/demo/Notebook .mp4" type="video/mp4">
+
+            </video>
             </div>
-            <div data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInUp animated secandimg" >
-                <img src="./images/demo/img16.png" alt="">
-            </div>
+
+
 
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="caption">
-                            <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><?php echo $slider1;?></h2>
-                                							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><?php echo $slider2;?> <span class="color"><?php echo $slider22;?></span> </h3>
-                                							<p data-wow-duration="1000ms" class="wow slideInRight animated"><?php  echo $slider3;?></p>
+                                <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><?php echo $slider1;?></h2>
 
-                                							<ul class="social-links text-center">
-                                								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                                								<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                                								<li><a href=""><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-                                							</ul>
-                        </div>
+                                  <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><?php echo $slider2;?>  </h3>
+                                 <p data-wow-duration="1000ms" class="wow slideInRight animated"><?php  echo $slider3;?></p>
+
+
+                                <ul class="social-links text-center">
+                                    <li><a href="https://twitter.com/soft_builders"><i class="fa fa-twitter fa-lg Hicon"></i></a></li>
+                                    <li><a href="https://web.facebook.com/softbuilders01/?_rdc=1&_rdr" target="_blank"><i class="fa fa-facebook fa-lg Hicon"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/11367264/" target="_blank"><i class="fa fa-linkedin fa-lg Hicon" aria-hidden="true"></i></a></li>
+                                </ul>
+                </div>
                     </div>
 
                 </div>
             </div>
+
+
+            <div class="headover"></div>
+
 		</section>
 		
         <!--End Home SliderEnd==================================== -->
@@ -93,7 +104,7 @@
         <!--Features==================================== -->
 		<section>
 		<div class="container">
-			<div class="row">
+			<div class="row" id="accordion">
 			<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="1500ms" >
 						<h2><?php echo $heads1;?></h2>
 						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
@@ -102,22 +113,22 @@
 					<div class="col-md-8">
                         <?php if ($lang == 'english'){?>
 
-    <div class="panel panel-default wow slideInLeft animated" data-wow-duration="1000ms">
+    <div class="panel panel-default wow slideInLeft animated" data-wow-duration="1000ms" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
         <div class="panel-heading">
             <h4 class="panel-title text-primary">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b class="caret"></b> <?php echo $quaity;?> </a>
+                <a  data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b class=" quality caret"></b> <?php echo $quaity;?> </a>
                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> <span class="pull-right glyphicon glyphicon-plus cucolor"></span></a> 
                 
                 
             </h4>
         </div>
         <div id="collapseOne" class="panel-collapse collapse">
-            <div class="panel-body">
+            <div class="panel-body" >
                <p><?php echo $qcontent;?></>
             </div>
         </div>
     </div>
-    <div class="panel panel-default wow slideInLeft animated" data-wow-duration="1000ms" >
+    <div class="panel panel-default wow slideInLeft animated" data-wow-duration="1000ms"  data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" >
         <div class="panel-heading">
             <h4 class="panel-title text-primary">
            
@@ -402,155 +413,214 @@
         <!--
         End Features
         ==================================== -->
-		
-		
-        <!--
-        Our Works
-        ==================================== -->
-<section id="works">
+
+
+
+<!--
+Our Works
+==================================== -->
+
+<section id="works" class="works clearfix">
     <div class="container">
         <div class="row">
-            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
+            <div class="sec-title text-center">
+                <h2>Works</h2>
+                <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+            </div>
 
-                <div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-                    <h2><?php echo $list3;?></h2>
-                    <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
-                </div>
-
-                <div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
-                    <p><?php echo $ourwork;?></p>
-                </div>
+            <div class="sec-sub-title text-center">
+                <p><?php echo $ourwork;?></p>
             </div>
 
 
-                <div align="center">
-                    <?php if ($lang == "english"){?>
+            <div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+                <?php if($lang == 'english') { ?>
+                <ul class="text-center">
+                    <li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
+                    <li><a href="javascript:;" data-filter=".dev" class="filter">Web Development</a></li>
+                    <li><a href="javascript:;" data-filter=".des" class="filter">Web Design</a></li>
+                    <li><a href="javascript:;" data-filter=".ecom" class="filter">Ecommerce Site</a></li>
+                </ul>
+                <?php }else{ ?>
+                <ul class="text-center">
 
-                        <button class="btn btn-default filter-button" data-filter="all">All</button>
-                        <button class="btn btn-default filter-button" data-filter="hdpe">Pure</button>
-                        <button class="btn btn-default filter-button" data-filter="sprinkle">Prestashop</button>
-                        <button class="btn btn-default filter-button" data-filter="spray">Wordpress</button>
-                    <?php } elseif ($lang == 'arabic') {?>
-                        <button class="btn btn-default filter-button" data-filter="spray">وردبرس</button>
-                        <button class="btn btn-default filter-button" data-filter="sprinkle">بريستا شوب</button>
-                        <button class="btn btn-default filter-button" data-filter="hdpe">متنوع</button>
-                        <button class="btn btn-default filter-button" data-filter="all">الكل</button>
-                    <?php }?>
-
-                </div>
-
-            <br/>
-
-
-            <?php if($lang == 'english'){?>
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe  wow fadeInUp animated" data-wow-duration="500ms">
-                <img src="./images/demo/eldesigner.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $aldesiner0;?></h2>
-                  <h5><?php echo $aldesiner1;?></h5>
-                </div>
+                    <li><a href="javascript:;" data-filter=".ecom" class="filter">تجاره الكترونية</a></li>
+                    <li><a href="javascript:;" data-filter=".des" class="filter">تصميم</a></li>
+                    <li><a href="javascript:;" data-filter=".dev" class="filter">تطوير</a></li>
+                    <li><a href="javascript:;" data-filter="all" class="active filter">الكل</a></li>
+                </ul>
+                <?php }?>
             </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="200ms">
-                <img src="./images/demo/oriant.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $jordansteps0;?></h2>
-                    <h5><?php echo $jordansteps1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                <img src="./images/demo/techtech.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $tech0;?></h2>
-                    <h5><?php echo $tech1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="400ms">
-                <img src="./images/demo/aldawaj.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $aldawaj0;?></h2>
-                    <h5><?php echo $aldawaj1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="500ms">
-                <img src="./images/demo/bigshop.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $bigshop0;?></h2>
-                    <h5><?php echo $bigshop1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-                <img src="./images/demo/react.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $react0;?></h2>
-                    <h5><?php echo $react1;?></h5>
-                </div>
-            </div>
-            <?php } else {?>
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe wow fadeInUp animated" data-wow-duration="500ms" style="float: right">
-                <img src="./images/demo/eldesigner.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $aldesiner0;?></h2>
-                    <h5><?php echo $aldesiner1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="200ms" style="float: right">
-                <img src="./images/demo/oriant.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $jordansteps0;?></h2>
-                    <h5><?php echo $jordansteps1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms" style="float: right">
-                <img src="./images/demo/techtech.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $tech0;?></h2>
-                    <h5><?php echo $tech1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle  wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="400ms" style="float: right">
-                <img src="./images/demo/aldawaj.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $aldawaj0;?></h2>
-                    <h5><?php echo $aldawaj1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="500ms" style="float: right">
-                <img src="./images/demo/bigshop.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $bigshop0;?></h2>
-                    <h5><?php echo $bigshop1;?></h5>
-                </div>
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms" style="float: right">
-                <img src="./images/demo/react.png" class="img-responsive">
-                <div class="work-over">
-                    <h2><?php echo $react0;?></h2>
-                    <h5><?php echo $react1;?></h5>
-                </div>
-            </div>
-            <?php }?>
-
 
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+    <div class="project-wrapper">
+         <?php if($lang == 'english') { ?>
+        <figure class="mix work-item dev">
+            <img width="350" height="219" src="./images/demo/desmini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $aldesiner1;?>"  href="./images/demo/desmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $aldesiner0;?></h4>
+                <p>Web Development</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev">
+            <img src="./images/demo/oriantmini" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $jordansteps1;?>" href="./images/demo/oriantmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $jordansteps0;?></h4>
+                <p>Web Development</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev">
+            <img src="./images/demo/gamemini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $tech1;?>" href="./images/demo/gamemed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $tech0;?></h4>
+                <p>Web Development</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item ecom">
+            <img src="./images/demo/dawajmini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $aldawaj1;?>" href="./images/demo/dawajmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $aldawaj0 ;?></h4>
+                <p>Ecommerce</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item des">
+            <img src="./images/demo/theme1mini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="Design and implemanted Bootstrap theme" href="images/demo/theme1med.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>One Page theme</h4>
+                <p>Web Design</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item des">
+            <img src="./images/demo/theme2mini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="Design and implemanted Bootstrap theme" href="./images/demo/theme2med.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>Bootstrap theme</h4>
+                <p>Web Design</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev">
+            <img src="./images/demo/undermini.jpg" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="This system under construction" href="./images/demo/undermed.jpg"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>Chose Me</h4>
+                <p>Web Development</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item ecom">
+            <img src="./images/demo/undermini.jpg" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="This system under construction" href="./images/demo/undermed.jpg"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>Big Shop</h4>
+                <p>Ecommerce</p>
+            </figcaption>
+        </figure>
+
+        <?php } else { ?>
+        <figure class="mix work-item dev" style="float: right;">
+            <img width="350" height="219" src="./images/demo/desmini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $aldesiner1;?>"  href="./images/demo/desmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $aldesiner0;?></h4>
+                <p>تطوير مواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev" style="float: right;">
+            <img src="./images/demo/oriantmini" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $jordansteps1;?>" href="./images/demo/oriantmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $jordansteps0;?></h4>
+                <p> تطوير مواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev" style="float: right;">
+            <img src="./images/demo/gamemini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $tech1;?>" href="./images/demo/gamemed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $tech0;?></h4>
+                <p>تطوير مواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item ecom" style="float: right;">
+            <img src="./images/demo/dawajmini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="<?php echo $aldawaj1;?>" href="./images/demo/dawajmed.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4><?php echo $aldawaj0 ;?></h4>
+                <p>تسويق الكتروني</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item des" style="float: right;">
+            <img src="./images/demo/theme1mini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="تصميم وتنفيذ بوتستراب ثيم" href="images/demo/theme1med.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>ثيم من صفحة واحدة</h4>
+                <p>تصميم مواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item des" style="float: right;">
+            <img src="./images/demo/theme2mini.png" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="تصميم وتنفيذ بوتستراب ثيم" href="./images/demo/theme2med.png"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>بوتستراب ثيم</h4>
+                <p>تصميم مواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item dev" style="float: right;">
+            <img src="./images/demo/undermini.jpg" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="هذا الموقع تحت التطوير" href="./images/demo/undermed.jpg"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>اختارني</h4>
+                <p>تطوير المواقع</p>
+            </figcaption>
+        </figure>
+
+        <figure class="mix work-item ecom" style="float: right;">
+            <img src="./images/demo/undermini.jpg" alt="">
+            <figcaption class="overlay">
+                <a class="fancybox" rel="works" title="هذا الموقع تحت التطوير" href="./images/demo/undermed.jpg"><i class="fa fa-eye fa-lg"></i></a>
+                <h4>بيج شوب</h4>
+                <p>تسويق الكتروني</p>
+            </figcaption>
+        </figure>
+        <?php }?>
+
+
+    </div>
+
+        </div>
+    </div>
+
+
 </section>
 
 <!--
-        End Our Works
-        ==================================== -->
-		
-        <!--
+End Our Works
+==================================== -->
+
+
+<!--
         Meet Our Team
         ==================================== -->		
 		
@@ -568,7 +638,8 @@
 					</div>
 
 					<!-- single member -->
-					
+					<div class="container">
+                        <div class="row">
 					<figure class="team-member col-md-4 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
 						<div class="member-thumb">
 							<img src="./images/demo/moh.jpg" alt="Team Member" class="img-responsive">
@@ -624,8 +695,9 @@
 						<span class="textteam"><?php echo $major3;?></span>
 					</figure>
 					<!-- end single member -->
-					
-		
+
+                        </div>
+                    </div>
 					
 				</div>
 			</div>

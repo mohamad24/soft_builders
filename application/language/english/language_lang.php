@@ -9,28 +9,29 @@ $lang['list5'] = "Contact";
 
 /* slider */
 
-$lang['slider1'] = "Builders";
-$lang['slider2'] = "We are a team  of";
-$lang['slider22'] = "freelance";
-$lang['slider3'] = "We are a team of professionals";
+$lang['slider1'] = "Soft Builders";
+$lang['slider2'] = "Design,build and publish web applications!";
+
+$lang['slider3'] = "Optimal Solution,Best Price with High Quality !";
 
 
 /* why buliders section */
 
 
-$lang['heads1'] = "Why Builders";
+$lang['heads1'] = "Why Soft Builders";
 $lang ['ourvision'] = "The idea of creating Belders team is to reduce costs to customers who need to build websites for their businesses  but they are hesitant because of the large amount required by the software companies, due to the costs incurred by companies from wages of employees and wages of buildings etc.";
-$lang['whyq'] = "Why we create builders";
+$lang['whyq'] = "Why we create Soft builders";
 $lang['vision'] = "Our vision";
 
 
 
 
 $lang['quality'] = "High Quality";
-$lang['qcontent'] = "We are a team of professionals who have already worked in the software environment and therefore we have acquired the experience to work as an independent team.";
+$lang['qcontent'] = "we deliver business solutions in high quality where we follow the world standards, Creative design, Efficiency, Reliability and Consistency";
 
-$lang['warranty'] = " One Year warranty";
-$lang['wcontent'] = "We offer an annual maintenance contract with all of our products, including debugging and continuous support to ensure the system is fully maintained";
+$lang['warranty'] = "3 month warranty";
+$lang['wcontent'] = "We offer there months maintenance for implemanted product to ensure the system works as expected, 
+also we offer traning session on the software system, and you can get your long term support by subscribe to yearly contract support.";
 
 $lang['price'] = "Suitable Prices";
 $lang['pcontent1'] = "Our prices are set according to well thought out standards such as project size, quality required and others";
@@ -96,7 +97,7 @@ $lang['infotitle'] = "OR You Can Directly Contact Us";
 
 /* footer*/
 
-$lang['text'] = "The idea of creating Belders team is to reduce costs to customers who need to build websites for their businesses";
+$lang['text'] = "The idea of creating Soft Builders team is to reduce costs to customers who need to build websites for their businesses";
 
 
 
